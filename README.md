@@ -2,9 +2,9 @@
 
 ## The problem
 
-When using the Docker Toolbox on OS X (or macOS), it is possible to share local directories with Docker containers running on the VirtualBox Docker VM. **However, any changes made to files in those shared directories _are not seen_ by the containers.** One must reboot the Docker VM to clear cached _inode_ information so the containers can see the updated files.[^rootcause]
+When using the Docker Toolbox on OS X (or macOS), it is possible to share local directories with Docker containers running on the VirtualBox Docker VM. **However, any changes made to files in those shared directories _are not seen_ by the containers.** One must reboot the Docker VM to clear cached _inode_ information so the containers can see the updated files.
 
-[^rootcause]: The root cause of this problem is that VirtualBox does not propogate _inotify_ events from the Mac through to the Docker VM (or any Linux VM).
+_Note:_ The root cause of this problem is that VirtualBox does not propogate _inotify_ events from the Mac through to the Docker VM (or any Linux VM).
 
 ## The solution
 
