@@ -21,3 +21,7 @@ Both examples assume that the container will only be reading the files in the da
 In both examples the `run.sh` script propogates the local files to the Docker VM and starts the container that will do work on the synchronized files. The `refresh.sh` script propogates any local file changes to the data volumes already attached to the running container.
 
 The scripts assume that the Docker environment variables are configured properly.
+
+### Supporting containers
+
+The examples and example synchronization scripts use some containers. The Dockerfiles used to create those containers are found in the `docker-images` folder.
