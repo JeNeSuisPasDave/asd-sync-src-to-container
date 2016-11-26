@@ -11,3 +11,7 @@ The script `refresh.sh` will propogate changes from the local files to the data 
 This sychronization mechanism works by using `rsync` to copy a directory from the Mac to the Docker VM and then using `rsync` again to copy the directory from the Docker VM to the data volume container.
 
 Both scripts will, if necessary, create the intermediate directory on the Docker VM and create the data volume container.
+
+## demonstration
+
+To demonstrate that file changes are propogated, execute the `run.sh` script and then point your web browser to port _http://<IP>:5000/_ where _IP_ is the IP address of the Docker VM. Then, on the Mac, edit the `hello.py` source to change the H1 string; save the file and run `refresh.sh`. Now refresh your browser and you should see the new H1 text.

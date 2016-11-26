@@ -13,3 +13,7 @@ This sychronization mechanism works by using `rsync` to copy a directory from th
 Both scripts will, if necessary, create the intermediate directory on the Docker VM.
 
 **Note:** Although it can be expedient to used host-mapped data volumes, it is safer to use data volume containers---because data volume containers provide an anti-corruption mechanism that prevents a misbehaving container from modifying host files in unexpected ways.
+
+## demonstration
+
+To demonstrate that file changes are propogated, execute the `run.sh` script and then point your web browser to port _http://<IP>:5000/_ where _IP_ is the IP address of the Docker VM. Then, on the Mac, edit the `hello.py` source to change the H1 string; save the file and run `refresh.sh`. Now refresh your browser and you should see the new H1 text.

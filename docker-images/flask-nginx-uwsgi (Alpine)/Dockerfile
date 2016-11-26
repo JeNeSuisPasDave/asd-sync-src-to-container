@@ -1,5 +1,7 @@
 # nginx parts based on https://github.com/nginxinc/docker-nginx/blob/8921999083def7ba43a06fabd5f80e4406651353/mainline/alpine/Dockerfile
 #
+# Python parts based on https://github.com/docker-library/python/blob/693a75332e8ae5ad3bfae6e8399c4d7cc3cb6181/3.5/alpine/Dockerfile
+#
 
 # Changed to get GPG keys and nginx source from local files
 # Changed to remove PORTS and CMD from end of Dockerfile
